@@ -1,0 +1,7 @@
+/PharmacyAbdelPavel/bin/**
+/PharmacyAbdelPavel/obj/**
+/PharmacyAbdelPavel/.vs/**
+/PharmacyAbdelPavel/Settings/**
+
+*.sln
+StyleCop.Cache

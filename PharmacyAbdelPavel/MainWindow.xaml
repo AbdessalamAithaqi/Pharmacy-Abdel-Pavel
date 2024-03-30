@@ -1,0 +1,83 @@
+﻿<Window x:Class="PharmacyAbdelPavel.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:local="clr-namespace:PharmacyAbdelPavel" mc:Ignorable="d" Title="Pharmacy Abdel &amp; Pavel" Height="450" Width="1000" MinWidth="850" MinHeight="150" WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <!--Menu: row 0-->
+        <Menu Grid.ColumnSpan="5">
+            <MenuItem x:Name="btnImport" Click="BtnImport_Click" Header="_Import" />
+            <MenuItem Header="_Export">
+                <MenuItem x:Name="btnExportInStock" Click="BtnInStockReport_Click" Header="In-Stock Report" />
+                <MenuItem x:Name="btnExportOutOfStock" Click="BtnOutOfStockReport_Click" Header="Out-Of-Stock Report" />
+            </MenuItem>
+            <MenuItem Click="BtnSettings_Click" Header="_Settings" />
+        </Menu>
+
+        <!--Buffer Zone: row 1-->
+        <!--Medicine Data: row 2-->
+        <DataGrid x:Name="dgInventory" Grid.Row="1" Grid.ColumnSpan="5" AutoGenerateColumns="False" IsReadOnly="True" Margin="16,6,16,6" Grid.RowSpan="2">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                <DataGridTextColumn Header="Available Quantity" Binding="{Binding AvailableQuantity}" />
+                <DataGridTextColumn Header="Minimum Quantity" Binding="{Binding MinimumQuantity}" />
+                <DataGridTextColumn Header="Cabinet Number" Binding="{Binding CabinetNumber}" />
+                <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier}" />
+                <DataGridTextColumn Header="Category" Binding="{Binding Category}" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!--Beffer Zone: row 3-->
+        <!--Modification tools: row 4-->
+        <Grid Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <!--Search bar: column 0-->
+            <Grid Margin="0,10,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+
+                <TextBox></TextBox>
+                <Button Grid.Column="1" Content="Search" Width="80" Click="BtnSearch_Click" />
+            </Grid>
+
+            <!--Add item: column 1-->
+            <Button Grid.Column="1" Content="add" Width="100" Margin="0,10,0,20" Click="BtnAdd_Click"></Button>
+
+            <!--Remove item: column 2-->
+            <Button Grid.Column="2" Content="remove" Width="100" Margin="0,10,0,20" Click="BtnRemove_Click"></Button>
+
+            <!--Modify item: column 3-->
+            <Button Grid.Column="3" Content="modify" Width="100" Margin="0,10,0,20" Click="BtnModify_Click"></Button>
+
+            <!--Save: column 4-->
+            <Button Grid.Column="4" Content="save" Width="100" Margin="0,10,0,20" Click="BtnSave_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>

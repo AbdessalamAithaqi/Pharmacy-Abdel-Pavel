@@ -1,0 +1,69 @@
+﻿<Window x:Class="PharmacyAbdelPavel.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyAbdelPavel"
+        mc:Ignorable="d"
+        Title="Pharmacy Abdel &amp; Pavel Settings" Height="300" Width="450" MinWidth="350" MinHeight="250" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <!--Title: row 0-->
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="5">
+            Settings
+        </TextBlock>
+        <!--First Cabinet number: row 1-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="5">
+            First Cabinet Number
+        </TextBlock>
+        <TextBox x:Name="txtbFirstCabNum" Grid.Row="1" Grid.Column="2" Margin="5"/>
+        <Button Click="BtnFirstCabNum_Click" Grid.Row="1" Grid.Column="3" Margin="5">
+            Modify
+        </Button>
+        <!--Last Cabinet number: row 2-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5">
+            Last Cabinet Number
+        </TextBlock>
+        <TextBox x:Name="txtbLastCabNum" Grid.Row="2" Grid.Column="2" Margin="5"/>
+        <Button Click="BtnLastCabNum_Click" Grid.Row="2" Grid.Column="3" Margin="5">
+            Modify
+        </Button>
+        <!--Lowest Minimum quantity allowed: row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="5">
+            Lowest Minimum Quantity Allowed
+        </TextBlock>
+        <TextBox x:Name="txtbLowestMinQty" Grid.Row="3" Grid.Column="2" Margin="5"/>
+        <Button Click="BtnLowestMinQty_Click" Grid.Row="3" Grid.Column="3" Margin="5">
+            Modify
+        </Button>
+        <!--List of authorised suppliers: row 4-->
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="5">
+            List of authorized suppliers
+        </TextBlock>
+        <ListBox x:Name="lbAuthSupp" Grid.Row="4" Grid.Column="2" Margin="0,0,0,10" MinWidth="100"/>
+        <StackPanel Grid.Row="4" Grid.Column="3" Margin="5">
+            <Button Click="BtnAddSupp_Click" Margin="5">
+                Add
+            </Button>
+            <Button Click="BtnImportSupp_Click" Margin="5">
+                Import
+            </Button>
+            <Button Click="BtnRemoveSupp_Click" Margin="5">
+                Remove
+            </Button>
+        </StackPanel>
+    </Grid>
+</Window>

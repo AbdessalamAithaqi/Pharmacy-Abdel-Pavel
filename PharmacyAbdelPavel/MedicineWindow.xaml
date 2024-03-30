@@ -1,0 +1,69 @@
+﻿<Window x:Class="PharmacyAbdelPavel.MedicineWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyAbdelPavel"
+        mc:Ignorable="d"
+        Title="Pharmacy Abdel &amp; Pavel Medicine" Height="300" Width="400" MinWidth="400" MinHeight="300" WindowStartupLocation="CenterOwner">
+    <Grid x:Name="AddMedGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="auto" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="15*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <!--Title: row 0-->
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="3" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="5">
+            Medicine Information
+        </TextBlock>
+        <!--Name: row 1-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="5">
+            Name
+        </TextBlock>
+        <TextBox x:Name="nameInput" Grid.Row="1" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Name: row 2-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5">
+            Available Quantity
+        </TextBlock>
+        <TextBox x:Name="availableQuantityInput" Grid.Row="2" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Name: row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="5">
+            Minimum Quantity
+        </TextBlock>
+        <TextBox x:Name="minimumQuantityInput" Grid.Row="3" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Name: row 4-->
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="5">
+            Cabinet Number
+        </TextBlock>
+        <TextBox x:Name="cabinetNumberInput" Grid.Row="4" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Name: row 5-->
+        <TextBlock Grid.Row="5" Grid.Column="1" Margin="5">
+            Supplier
+        </TextBlock>
+        <ComboBox x:Name="cmbSuppliers" Grid.Row="5" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Name: row 6-->
+        <TextBlock Grid.Row="6" Grid.Column="1" Margin="5">
+            Category
+        </TextBlock>
+        <ComboBox x:Name="cmbCategories" Grid.Row="6" Grid.Column="3" Margin="0,0,0,5" />
+        <!--Buffer Zone: row 7-->
+        <!--Tool bar-->
+        <WrapPanel Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Right">
+            <Button x:Name="btnSave" Content="Save and Add New" Margin="10" Padding="3" Click="BtnSave_Click" />
+            <Button x:Name="btnSaveClose" Content="Save and Close" Margin=" 10" Padding="3" Click="BtnSaveClose_Click" />
+        </WrapPanel>
+    </Grid>
+</Window>

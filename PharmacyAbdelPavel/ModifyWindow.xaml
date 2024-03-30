@@ -1,0 +1,80 @@
+﻿<Window x:Class="PharmacyAbdelPavel.ModifyWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PharmacyAbdelPavel"
+        mc:Ignorable="d"
+        Title="ModifyWindow" Height="275" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+        <!--Title: row 0-->
+        <TextBlock Grid.Column="1" Grid.ColumnSpan="4" FontSize="30" FontWeight="Bold" HorizontalAlignment="Center" Margin="5">
+            Medicine Information
+        </TextBlock>
+        <!--Name: row 1-->
+        <TextBlock Grid.Row="1" Grid.Column="1" Margin="5">
+            Name
+        </TextBlock>
+        <TextBox x:Name="txtbName" Grid.Row="1" Grid.Column="3" Margin="0,0,0,5" />
+        <Button  Click="BtnModName_Click" Grid.Row="1" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+        <!--Available Quantity: row 2-->
+        <TextBlock Grid.Row="2" Grid.Column="1" Margin="5">
+            Available Quantity
+        </TextBlock>
+        <TextBox x:Name="txtbAvailableQty" Grid.Row="2" Grid.Column="3" Margin="0,0,0,5" />
+        <Button Click="BtnModAvailQty_Click" Grid.Row="2" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+        <!--Name: row 3-->
+        <TextBlock Grid.Row="3" Grid.Column="1" Margin="5">
+            Minimum Quantity
+        </TextBlock>
+        <TextBox x:Name="txtbMinQty" Grid.Row="3" Grid.Column="3" Margin="0,0,0,5" />
+        <Button Click="BtnModMinQty_Click" Grid.Row="3" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+        <!--Name: row 4-->
+        <TextBlock Grid.Row="4" Grid.Column="1" Margin="5">
+            Cabinet Number
+        </TextBlock>
+        <TextBox x:Name="txtbCabNum" Grid.Row="4" Grid.Column="3" Margin="0,0,0,5" />
+        <Button Click="BtnModCabNum_Click" Grid.Row="4" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+        <!--Name: row 5-->
+        <TextBlock Grid.Row="5" Grid.Column="1" Margin="5">
+            Supplier
+        </TextBlock>
+        <ComboBox x:Name="cmbSupplier" Grid.Row="5" Grid.Column="3" Margin="0,0,0,5" />
+        <Button Click="BtnModSupplier_Click" Grid.Row="5" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+        <!--Name: row 6-->
+        <TextBlock Grid.Row="6" Grid.Column="1" Margin="5">
+            Category
+        </TextBlock>
+        <ComboBox x:Name="cmbCategory" Grid.Row="6" Grid.Column="3" Margin="0,0,0,5" />
+        <Button Click="BtnModCat_Click" Grid.Row="6" Grid.Column="4" Margin="5">
+            Modify
+        </Button>
+    </Grid>
+</Window>
